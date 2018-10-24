@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.7.0 on win32)" generated="20181023 21:05:23.798">
+<suite id="s1" name="PtvniTest" source="C:\Users\Adamo\eclipse-workspace\PtvniTest">
+<suite id="s1-s1" name="Suite1" source="C:\Users\Adamo\eclipse-workspace\PtvniTest\Suite1.robot">
+<test id="s1-s1-t1" name="First Test">
+<kw name="Log" library="BuiltIn" type="setup">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Setup</arg>
+</arguments>
+<msg timestamp="20181023 21:05:23.867" level="INFO">Setup</msg>
+<status status="PASS" starttime="20181023 21:05:23.867" endtime="20181023 21:05:23.867"></status>
+</kw>
+<kw name="Insert Name">
+<kw name="Get Value From User" library="Dialogs">
+<doc>Pauses test execution and asks user to input a value.</doc>
+<arguments>
+<arg>Enter Name</arg>
+</arguments>
+<assign>
+<var>${Captcha}</var>
+</assign>
+<msg timestamp="20181023 21:05:33.009" level="INFO">${Captcha} = **</msg>
+<status status="PASS" starttime="20181023 21:05:23.868" endtime="20181023 21:05:33.009"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${Captcha}"=="${Name}"</arg>
+<arg>Log</arg>
+<arg>Result: ${Captcha} is equal</arg>
+<arg>ELSE</arg>
+<arg>Fail</arg>
+<arg>Log</arg>
+<arg>Result: ${err1}</arg>
+</arguments>
+<kw name="Fail" library="BuiltIn">
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<arguments>
+<arg>Log</arg>
+<arg>Result: ${err1}</arg>
+</arguments>
+<msg timestamp="20181023 21:05:33.017" level="INFO">Set tag 'Result: Name is not equal'.</msg>
+<msg timestamp="20181023 21:05:33.019" level="FAIL">Log</msg>
+<status status="FAIL" starttime="20181023 21:05:33.015" endtime="20181023 21:05:33.020"></status>
+</kw>
+<status status="FAIL" starttime="20181023 21:05:33.012" endtime="20181023 21:05:33.021"></status>
+</kw>
+<status status="FAIL" starttime="20181023 21:05:23.867" endtime="20181023 21:05:33.022"></status>
+</kw>
+<kw name="Log" library="BuiltIn" type="teardown">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Teardown</arg>
+</arguments>
+<msg timestamp="20181023 21:05:33.024" level="INFO">Teardown</msg>
+<status status="PASS" starttime="20181023 21:05:33.023" endtime="20181023 21:05:33.024"></status>
+</kw>
+<tags>
+<tag>Result: Name is not equal</tag>
+</tags>
+<status status="FAIL" starttime="20181023 21:05:23.866" endtime="20181023 21:05:33.025" critical="yes">Log</status>
+</test>
+<test id="s1-s1-t2" name="Second Test">
+<kw name="Log" library="BuiltIn" type="setup">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Setup</arg>
+</arguments>
+<msg timestamp="20181023 21:05:33.062" level="INFO">Setup</msg>
+<status status="PASS" starttime="20181023 21:05:33.061" endtime="20181023 21:05:33.062"></status>
+</kw>
+<kw name="Insert Names">
+<kw name="Get Value From User" library="Dialogs">
+<doc>Pauses test execution and asks user to input a value.</doc>
+<arguments>
+<arg>Enter Name 2</arg>
+</arguments>
+<assign>
+<var>${Captcha2}</var>
+</assign>
+<msg timestamp="20181023 21:05:37.948" level="INFO">${Captcha2} = **</msg>
+<status status="PASS" starttime="20181023 21:05:33.063" endtime="20181023 21:05:37.949"></status>
+</kw>
+<kw name="Get Value From User" library="Dialogs">
+<doc>Pauses test execution and asks user to input a value.</doc>
+<arguments>
+<arg>Enter Name 3</arg>
+</arguments>
+<assign>
+<var>${Captcha3}</var>
+</assign>
+<msg timestamp="20181023 21:05:42.857" level="INFO">${Captcha3} = **</msg>
+<status status="PASS" starttime="20181023 21:05:37.951" endtime="20181023 21:05:42.858"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${Captcha2}"=="${Captcha3}"</arg>
+<arg>Log</arg>
+<arg>Result: ${Captcha2} is equal ${Captcha3}</arg>
+<arg>ELSE</arg>
+<arg>Fail</arg>
+<arg>Log</arg>
+<arg>Result: ${err1} ${Captcha2} and ${Captcha3}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Result: ${Captcha2} is equal ${Captcha3}</arg>
+</arguments>
+<msg timestamp="20181023 21:05:42.864" level="INFO">Result: ** is equal **</msg>
+<status status="PASS" starttime="20181023 21:05:42.863" endtime="20181023 21:05:42.865"></status>
+</kw>
+<status status="PASS" starttime="20181023 21:05:42.860" endtime="20181023 21:05:42.866"></status>
+</kw>
+<status status="PASS" starttime="20181023 21:05:33.062" endtime="20181023 21:05:42.866"></status>
+</kw>
+<kw name="Log" library="BuiltIn" type="teardown">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Teardown</arg>
+</arguments>
+<msg timestamp="20181023 21:05:42.869" level="INFO">Teardown</msg>
+<status status="PASS" starttime="20181023 21:05:42.867" endtime="20181023 21:05:42.869"></status>
+</kw>
+<status status="PASS" starttime="20181023 21:05:33.026" endtime="20181023 21:05:42.870" critical="yes"></status>
+</test>
+<status status="FAIL" starttime="20181023 21:05:23.851" endtime="20181023 21:05:42.873"></status>
+</suite>
+<status status="FAIL" starttime="20181023 21:05:23.830" endtime="20181023 21:05:42.883"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1">Critical Tests</stat>
+<stat pass="1" fail="1">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1">Result: Name is not equal</stat>
+</tag>
+<suite>
+<stat pass="1" fail="1" id="s1" name="PtvniTest">PtvniTest</stat>
+<stat pass="1" fail="1" id="s1-s1" name="Suite1">PtvniTest.Suite1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
